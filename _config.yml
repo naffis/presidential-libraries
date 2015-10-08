@@ -1,0 +1,16 @@
+# Site settings
+title: "Presidential Libraries -> The Presidential Daily Diary"
+email: davidnaffis@gmail.com
+description: Github based API generator
+baseurl: "/presidential-libraries" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+emptyArray: []
+
+# Build settings
+markdown: kramdown
+
+collections:
+  xpi:
+    output: true
+    permalink: /xpi/:path/
