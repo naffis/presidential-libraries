@@ -15,7 +15,7 @@ task :generate do
   })).process
 end
 
-desc "Generate and publish blog to gh-pages"
+desc "Generate and publish blog to gh-pages (travis)"
 task :default => [:generate] do
   Dir.mktmpdir do |tmp|
     cp_r "_site/.", tmp
@@ -27,6 +27,20 @@ task :default => [:generate] do
     # system "git remote add origin https://${GH_TOKEN}@${GH_REF}"
     # system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
     # system "git push origin gh-pages --force"
-    system "git push --force https://${GH_TOKEN}@${GH_REF} origin:gh-pages"
+    system "git push --force https://${GH_TOKEN}@${GH_REF} master:gh-pages"
+  end
+end
+
+desc "Generate and publish blog to gh-pages (locally)"
+task :publish => [:generate] do
+  Dir.mktmpdir do |tmp|
+    cp_r "_site/.", tmp
+    Dir.chdir tmp
+    system "git init"
+    system "git add ."
+    message = "Site updated at #{Time.now.utc}"
+    system "git commit -m #{message.inspect}"
+    system "git remote add origin git@github.com:#{GITHUB_REPONAME}.git"
+    system "git push origin gh-pages --force"
   end
 end
