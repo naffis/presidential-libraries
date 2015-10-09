@@ -25,7 +25,7 @@ task :default => [:generate] do
     message = "Site updated at #{Time.now.utc}"
     system "git commit -m #{message.inspect}"
     # https://github.com/naffis/presidential-libraries.git
-    system "git remote add origin https://github.com/naffis/presidential-libraries.git"
+    system "git remote add origin https://naffis@github.com/naffis/presidential-libraries.git"
     system "git push origin gh-pages --force"
   end
 end
