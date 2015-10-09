@@ -2,6 +2,7 @@ language: ruby
 rvm:
 - 2.1
 script: bundle exec rake travis
+bundler_args: --binstubs
 branches:
   only:
   - master
@@ -9,6 +10,6 @@ env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
   - secure: wAIjBF7bB+i7e9+j0CXa9Hm3Ax81cgDWPUtBqGRcPnXzBeS5GMmKsigGJvMstKb+fXLsRv+TWFUqDwl7XCVmt0+FpKSgRyHZ1d8XpWwd5h40zdGoUoi0HQXort7fz7On/sw7yrzmrsZATIAj86O+V95zHiDkr5CT6U59wegDvSG99L15pqRFf/pKUTwI6s9wCN7+uYQEDKsRR1Mgwoj/rsNex9Yw9HGXfdwhj1P661JqFtg0Fexkc+jNt+KDab4MYux6W4bfKA8Gwk00vZOHV53PeUyCSrg9EnkfZt98KrXi8SOjuxi7db+Lckzwwam7E6we+Q4dwG6MP/OPhbmQik3Q4YDxFSryH7XN39/HNm1SwSGRumqHGqWvZC1HffokLCTXEGM0oSYeQt6KN5n8zvIS+8lJVF5PVCM6C4HeVapDAGMT339R3JiVjVVX665dVB79SmEnJTuvprdTD0j9QaqWK9K0/sHAKwB610i2FrnBvAiODn+J9Z0qpXOnqLyQDLVwSCF6KQGZegOMz7zqqtMDsngL+Nz61hptUMtshoouve7ru0U1MLvyEZyEEy1Zl21+rtKD8rU4ltFGZXDqpj0qXl76Phl8R+DW/FWzOqCZI6++A05m0rbjTd6FK/TE6I/XSXmuAe24m9Ws46OKiPuSA/TlxvAtJvX/yb+jEP8=
-install:
+install: bundle install
 - git config --global user.email "davidnaffis@gmail.com"
 - git config --global user.name "naffis"
