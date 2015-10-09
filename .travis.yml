@@ -9,7 +9,7 @@ branches:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-  - GH_REF: github.com/naffis/presidential-diaries.git
+  - GH_REF: github.com/naffis/presidential-libraries.git
   - secure: yBaTpg976LfGo8W1efKT9C4voJPwKmbMVSXVWYsiLL/RSn7s/fXOU1JDwkIy4Gj4ZFW1uOgrjEfZ3yUc/4mLmcUSzkXv7t7sOMZfsu6m23OATfRcxA1A1Xj9CuTji46sMppiLrgQnVtpglqc9u+Sk4HCsk98XknACnA+jwcqZVbu4aZbpWfXl64+jZbYha5di/0In4OC7fapaLZPa3VM/1TwIdYlUZMrc0MT3Kj/+GmaGTVvsVuIsAmwLxRfjYhlXajR2WLMO+MwV3uTUsLSTzVKPcFGI1F1Q+eGJvFJUm4NJxil+yQopoNaHIE57bXhGXq/xOzpRRiTKBos/ibwAgFfDJCdWrmgjIQp5I3edGqiIGv7iMzov3h2dhiy5UyfxhMSDPAr+tuoqSDJ0gV8DA2G0VJQ/18VEjz9tmZDF8l6V2lNvbtLv/SDrfAfuknyzeqWAA053pWWqc+sxGE0NaEqM/Y73JIuOg531LpXHnwJbYcZpy61HPzYu6yrqSdQUBH8Dcd7sCbX75TS8opQ/PACYiuqPXURHraL+75W6pJgbaAej1BaFTANHNLxoHKzsnHYnqeaqFQopSw5lkUGy+Ecb+Pnf1XAIl2knPeTaR/Igiv4vGUaCCi3rP1igsMQVuCaDOrIgI/+5UeOBkcKnNXA2EhhZz2cOqd17aV7T1c=
 install:
 - git config --global user.email "davidnaffis@gmail.com"
