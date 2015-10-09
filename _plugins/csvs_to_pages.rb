@@ -7,7 +7,8 @@ module Jekyll
       @base = base
       @dir = dir
       @name = filename   
-      # puts filename   
+      
+      puts File.join(base, dir, filename)
       
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), template)
@@ -76,17 +77,22 @@ module Jekyll
 
     # this can be cleaned up into one or two regex's
     def sanitize_string(input)
-      unless input.nil?
+      unless input.nil?        
+        input = input[0..50]
+        input = input.gsub(/[\s+-]/, "-")
+        input = input.gsub(/[^\w-]/, "")        
         input = input.downcase
-        input = input.gsub(/[^\w\s_-]+/, '-')
-        input = input.gsub(/(^|\b\s)\s+($|\s?\b)/, '\\1\\2')
-        input = input.gsub(/\s+/, '-')
-        input = input.gsub(/.,?!/, '-')
-        input = input.gsub(/\//, '-')
-        input = input.gsub(/\\/, '-')        
-        input = input.gsub(/\-+/, '-')
-        input = input[0..50]       
-        input = input.gsub(/\-$/,'')
+
+        # input = input.downcase
+        # input = input.gsub(/[^\w\s_-]+/, '-')
+        # input = input.gsub(/(^|\b\s)\s+($|\s?\b)/, '\\1\\2')
+        # input = input.gsub(/\s+/, '-')
+        # input = input.gsub(/.,?!/, '-')
+        # input = input.gsub(/\//, '-')
+        # input = input.gsub(/\\/, '-')        
+        # input = input.gsub(/\-+/, '-')
+        # input = input[0..50]       
+        # input = input.gsub(/\-$/,'')
       else
         ""
       end

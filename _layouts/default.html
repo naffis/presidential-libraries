@@ -98,35 +98,26 @@
           return '<a href="' + str + '" target="_blank">' + str + '</a>';
         }
         else {
-          str = str.toLowerCase();
-
-          str = str.replace(/[^\w\s\n_-]+/gm, '-');
-          str = str.replace(/(^|\b\s)\s+($|\s?\b)/gm, '\\1\\2');
-          str = str.replace(/\s+/gm, '-');
-          str = str.replace(/.,?!/gm, '-');
-          str = str.replace(/\//gm, '-');
-          str = str.replace(/\\/gm, '-');
-          str = str.replace(/\-+/gm, '-');
-          str = str.slice(0, 51);
-          str = str.replace(/\-$/gm,'');
-
           return '<a href="' + partial + '/' + sanitizeString(str) + '.html">' + oldStr + '</a>';
         }
       };
 
       function sanitizeString(str) {
         if (str) {
-          var str = str.toLowerCase();
+          var str = str.slice(0, 51);
+          str = str.replace(/[\s+-]/gm, "-")
+          str = str.replace(/[^\w-]/gm, "")
+          str = str.toLowerCase();
 
-          str = str.replace(/[^\w\s_-]+/gm, '-');
-          str = str.replace(/(^|\b\s)\s+($|\s?\b)/gm, '\\1\\2');
-          str = str.replace(/\s+/gm, '-');
-          str = str.replace(/.,?!/gm, '-');
-          str = str.replace(/\//gm, '-');
-          str = str.replace(/\\/gm, '-');
-          str = str.replace(/\-+/gm, '-');
-          str = str.slice(0, 51);
-          str = str.replace(/\-$/gm,'');
+          // str = str.replace(/[^\w\s_-]+/gm, '-');
+          // str = str.replace(/(^|\b\s)\s+($|\s?\b)/gm, '\\1\\2');
+          // str = str.replace(/\s+/gm, '-');
+          // str = str.replace(/.,?!/gm, '-');
+          // str = str.replace(/\//gm, '-');
+          // str = str.replace(/\\/gm, '-');
+          // str = str.replace(/\-+/gm, '-');
+          // str = str.slice(0, 51);
+          // str = str.replace(/\-$/gm,'');
 
           return str;
         }

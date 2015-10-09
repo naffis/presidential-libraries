@@ -1,8 +1,7 @@
 module Jekyll
   module SortArrayFilter
     def sort_array(array) 
-    	array = array.delete_if {|x| x.nil? }   	
-    	array.sort
+    	array.delete_if {|x| x.nil? }.sort
     end
   end
 end
