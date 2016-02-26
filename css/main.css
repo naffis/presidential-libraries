@@ -78,7 +78,7 @@ nav.sticky {
   background-size: cover;
 }
 
-#entries {  
+#featured {  
   padding-top: 75px;
   background: url(/presidential-libraries/img/HST-Independence-State-Visit-Brazil.jpg) no-repeat center center fixed; 
   display: table;
@@ -113,7 +113,7 @@ nav.sticky {
   width:5%;
 }
 
-#entries-carousel {
+#featured-carousel {
   position: relative;
   top: 100px;
 }
