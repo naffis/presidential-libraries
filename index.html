@@ -42,7 +42,7 @@
 <nav class="navbar navbar-default">
   <ul class="nav navbar-nav">
      <li><a href="/presidential-libraries/index.html#home">About</a></li>
-     <li><a href="/presidential-libraries/index.html#entries">Entries</a></li>
+     <li><a href="/presidential-libraries/index.html#featured">Featured</a></li>
      <li><a href="/presidential-libraries/index.html#presidents">Presidents</a></li>
      <li><a href="/presidential-libraries/api">API</a></li>  
   </ul>  
@@ -50,12 +50,12 @@
 
 <!-- /first section -->
 
-<!-- second section - entries -->
-<div id="entries">
+<!-- second section - featured -->
+<div id="featured">
   
     <div class="col-md-12">
-      <h1>Entries</h1>
-      <div id="entries-carousel" class="carousel slide">
+      <h1>Featured</h1>
+      <div id="featured-carousel" class="carousel slide">
         <!-- Carousel items -->
         <div class="carousel-inner">
           <div class="item active">
@@ -87,8 +87,8 @@
           </div>
           <!--/item-->                      
         </div>
-        <!--/carousel-inner--> <a class="left carousel-control" href="#entries-carousel" data-slide="prev">‹</a>
-        <a class="right carousel-control" href="#entries-carousel" data-slide="next">›</a>
+        <!--/carousel-inner--> <a class="left carousel-control" href="#featured-carousel" data-slide="prev">‹</a>
+        <a class="right carousel-control" href="#featured-carousel" data-slide="next">›</a>
       </div>
       <!--/myCarousel-->
     </div>   
@@ -161,10 +161,10 @@
   });
 
   $(document).ready(function() {
-    $('#entries-carousel').carousel({
+    $('#featured-carousel').carousel({
     interval: 10000
     })        
-      $('#entries-carousel').on('slid.bs.carousel', function() {
+      $('#featured-carousel').on('slid.bs.carousel', function() {
         //alert("slid");
     });                
   });
