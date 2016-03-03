@@ -19,6 +19,7 @@ nav.sticky {
   position: fixed;  
   background-color: #003E7E;
   opacity: 0.75;
+  left: 0;
 }
 
 .navbar {        
